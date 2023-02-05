@@ -31,6 +31,7 @@ function App() {
     setProfile(null);
   };
 
+  console.log('Profile: ', profile);
 
   return (
     <div className="App">
