@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const clientId = '835466892579-uloljkafh774931eg5vpm23ak3jmnjqv.apps.googleusercontent.com';
-  const [profile, setProfile] = useState([]);
+  const [profile, setProfile] = useState(null);
 
   useEffect(() => {
     const initClient = () => {
@@ -31,7 +31,7 @@ function App() {
     setProfile(null);
   };
 
-  console.log('Profile: ', profile);
+  console.log('Profile: ', !!profile.name);
 
   return (
     <div className="App">
@@ -55,7 +55,7 @@ function App() {
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
-            isSignedIn={!!profile.name}
+            isSignedIn={!!profile}
           />
         )}
       </div>
