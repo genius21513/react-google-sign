@@ -55,7 +55,7 @@ function App() {
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
-            isSignedIn={!!profile}
+            isSignedIn={!!profile.name}
           />
         )}
       </div>
