@@ -37,14 +37,12 @@ function App() {
     <div className="App">
       <div className='auth-btns'>
         <br />
-        <br />
         {profile ? (
           <div>
             <img src={profile.imageUrl} alt="user image" />
             <h3>User Logged in</h3>
             <p>Name: {profile.name}</p>
             <p>Email Address: {profile.email}</p>
-            <br />
             <br />
             <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} />
           </div>
@@ -55,7 +53,7 @@ function App() {
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
-            isSignedIn={!!profile}
+            isSignedIn={false}
           />
         )}
       </div>
